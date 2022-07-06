@@ -1,11 +1,13 @@
 {
-  "name": "default",
+  "name": "myFlix-client",
   "version": "1.0.0",
-  "description": "package.json",
+  "description": "",
   "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
   },
-  "author": "",
+  "author": "Colette J Parker",
   "license": "ISC"
 }
