@@ -13,4 +13,4 @@ export class MovieCard extends React.Component {
             {movies.map(movie => <MovieCard key={movie._id} movie={movie} onMovieClick={newSelectedMovie => { this.setState({ selectedMovie: newSelectedMovie }); }} />)}
           </div>
         );
-      }
+      } }
