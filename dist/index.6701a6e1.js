@@ -25508,13 +25508,20 @@ var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 class MovieCard extends _reactDefault.default.Component {
+    constructor(){
+        super();
+        this.state = {
+            movies: [],
+            selectedMovie: null
+        };
+    }
     render() {
         const { movies , selectedMovie  } = this.state;
         if (selectedMovie) return(/*#__PURE__*/ _jsxRuntime.jsx(MovieView, {
             movie: selectedMovie,
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 7
+                lineNumber: 12
             },
             __self: this
         }));
@@ -25522,7 +25529,7 @@ class MovieCard extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 9
+                lineNumber: 14
             },
             __self: this,
             children: "The list is empty!"
@@ -25531,7 +25538,7 @@ class MovieCard extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 12
+                lineNumber: 17
             },
             __self: this,
             children: movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(MovieCard, {
@@ -25543,7 +25550,7 @@ class MovieCard extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/movie-card/movie-card.jsx",
-                        lineNumber: 13
+                        lineNumber: 18
                     },
                     __self: this
                 }, movie._id)
