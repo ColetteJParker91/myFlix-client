@@ -50,41 +50,21 @@ export function LoginView(props) {
         });
     }
   };
-
   return (
-    <Form>
-      <h2 className="mb-3 mx-auto mt-5">Login to BestMarvelMovies</h2>
-      <Form.Group className="mb-3 mx-auto mt-4" controlId="formUsername">
-        <Form.Label>Username:</Form.Label>
-        <Form.Control
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-          placeholder="Enter a username"
-        />
-        {usernameErr && <p>{usernameErr}</p>}
-      </Form.Group>
-
-      <Form.Group className="mb-3 mx-auto mt-4">
-        <Form.Label>Password:</Form.Label>
-        <Form.Control
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-          minLength="8"
-          placeholder=""
-        />
-        {passwordErr && <p>{passwordErr}</p>}
-      </Form.Group>
-
-      <Button className="mt-4" type="submit" onClick={handleSubmit}>
-        Submit
-      </Button>
-    </Form>
+    <form>
+      <label>
+        Username:
+        <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
+      </label>
+      <label>
+        Password:
+        <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+      </label>
+      <button type="submit" onClick={handleSubmit}>Submit</button>
+    </form>
   );
 }
+ 
 
 LoginView.propTypes = {
   user: PropTypes.shape({
@@ -92,4 +72,4 @@ LoginView.propTypes = {
     password: PropTypes.string.isRequired,
   }),
   onLoggedIn: PropTypes.func.isRequired,
-};
+}

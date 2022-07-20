@@ -73,58 +73,43 @@ export function RegistrationView(props) {
   };
 
   return (
-    <Form>
-      <h2 className="mb-3 mx-auto mt-5">BestMarvelMovies Registration</h2>
-
-      <Form.Group className="mb-3 mx-auto mt-4" controlId="formUsername">
-        <Form.Label>Username:</Form.Label>
-        <Form.Control
+    <form>
+      <label>
+        Username:
+        <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          required
-          placeholder="Enter a username"
         />
-        {values.usernameErr && <p>{values.usernameErr}</p>}
-      </Form.Group>
-
-      <Form.Group className="mb-3 mx-auto mt-4">
-        <Form.Label>Password:</Form.Label>
-        <Form.Control
+      </label>
+      <label>
+        Password:
+        <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
-          minLength="6"
-          placeholder="Password must be 6 characters long"
         />
-        {values.passwordErr && <p>{values.passwordErr}</p>}
-      </Form.Group>
-
-      <Form.Group className="mb-3 mx-auto mt-4">
-        <Form.Label>Email:</Form.Label>
-        <Form.Control
+      </label>
+      <label>
+        Email:
+        <input
           type="email"
           value={email}
-          required
           onChange={(e) => setEmail(e.target.value)}
         />
-        {values.emailErr && <p>{values.emailErr}</p>}
-      </Form.Group>
-
-      <Form.Group className="mb-3 mx-auto mt-4">
-        <Form.Label>Birthday:</Form.Label>
-        <Form.Control
+      </label>
+      <label>
+        Birthday:
+        <input
           type="date"
           value={birthday}
           onChange={(e) => setBirthday(e.target.value)}
         />
-      </Form.Group>
-
-      <Button className="mt-4" type="submit" onClick={handleSubmit}>
-        Register
-      </Button>
-    </Form>
+      </label>
+      <button type="submit" onClick={handleSubmit}>
+        Submit
+      </button>
+    </form>
   );
 }
 
@@ -135,4 +120,4 @@ RegistrationView.propTypes = {
     Email: PropTypes.string.isRequired,
     Birthday: PropTypes.string,
   }),
-};
+}
