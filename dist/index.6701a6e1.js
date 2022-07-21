@@ -25285,13 +25285,18 @@ class MainView extends _reactDefault.default.Component {
             selectedMovie: newSelectedMovie
         });
     }
+    onLoggedIn(user) {
+        this.setState({
+            user
+        });
+    }
     render() {
         const { movies , selectedMovie  } = this.state;
         if (selectedMovie) return(/*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
             movie: selectedMovie,
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 41
+                lineNumber: 47
             },
             __self: this
         }));
@@ -25299,7 +25304,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 43
+                lineNumber: 49
             },
             __self: this,
             children: "The list is empty!"
@@ -25308,7 +25313,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 46
+                lineNumber: 52
             },
             __self: this,
             children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
@@ -25318,7 +25323,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 48
+                    lineNumber: 54
                 },
                 __self: this
             }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
@@ -25328,7 +25333,7 @@ class MainView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 50
+                        lineNumber: 56
                     },
                     __self: this
                 }, movie._id)
@@ -28575,8 +28580,9 @@ function LoginView(props) {
     };
     const handleSubmit = (e)=>{
         e.preventDefault();
-        /* console.log(username, password);
-    props.onLoggedIn(username); */ const isReq = validate();
+        console.log(username, password);
+        props.onLoggedIn(username);
+        const isReq = validate();
         if (isReq) // Send a request to the server for authentication
         _axiosDefault.default.post("https://best-marvel-movies.herokuapp.com/login", {
             Username: username,
@@ -28588,109 +28594,61 @@ function LoginView(props) {
             console.log("no such user");
         });
     };
-    return(/*#__PURE__*/ _jsxRuntime.jsxs(Form, {
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("form", {
         __source: {
             fileName: "src/components/login-view/login-view.jsx",
-            lineNumber: 55
+            lineNumber: 54
         },
         __self: this,
         children: [
-            /*#__PURE__*/ _jsxRuntime.jsx("h2", {
-                className: "mb-3 mx-auto mt-5",
+            /*#__PURE__*/ _jsxRuntime.jsxs("label", {
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 56
-                },
-                __self: this,
-                children: "Login to BestMarvelMovies"
-            }),
-            /*#__PURE__*/ _jsxRuntime.jsxs(Form.Group, {
-                className: "mb-3 mx-auto mt-4",
-                controlId: "formUsername",
-                __source: {
-                    fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 57
+                    lineNumber: 55
                 },
                 __self: this,
                 children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Label, {
-                        __source: {
-                            fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 58
-                        },
-                        __self: this,
-                        children: "Username:"
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Control, {
+                    "Username:",
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
                         type: "text",
                         value: username,
                         onChange: (e)=>setUsername(e.target.value)
                         ,
-                        required: true,
-                        placeholder: "Enter a username",
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 59
+                            lineNumber: 57
                         },
                         __self: this
-                    }),
-                    usernameErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                        __source: {
-                            fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 66
-                        },
-                        __self: this,
-                        children: usernameErr
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsxRuntime.jsxs(Form.Group, {
-                className: "mb-3 mx-auto mt-4",
+            /*#__PURE__*/ _jsxRuntime.jsxs("label", {
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 69
+                    lineNumber: 59
                 },
                 __self: this,
                 children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Label, {
-                        __source: {
-                            fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 70
-                        },
-                        __self: this,
-                        children: "Password:"
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Control, {
+                    "Password:",
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
                         type: "password",
                         value: password,
                         onChange: (e)=>setPassword(e.target.value)
                         ,
-                        required: true,
-                        minLength: "8",
-                        placeholder: "",
                         __source: {
                             fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 71
+                            lineNumber: 61
                         },
                         __self: this
-                    }),
-                    passwordErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                        __source: {
-                            fileName: "src/components/login-view/login-view.jsx",
-                            lineNumber: 79
-                        },
-                        __self: this,
-                        children: passwordErr
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsxRuntime.jsx(Button, {
-                className: "mt-4",
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
                 type: "submit",
                 onClick: handleSubmit,
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 82
+                    lineNumber: 63
                 },
                 __self: this,
                 children: "Submit"
@@ -29889,179 +29847,106 @@ function RegistrationView(props) {
             alert("unable to register");
         });
     };
-    return(/*#__PURE__*/ _jsxRuntime.jsxs(Form, {
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("form", {
         __source: {
             fileName: "src/components/registration-view/registration-view.jsx",
             lineNumber: 76
         },
         __self: this,
         children: [
-            /*#__PURE__*/ _jsxRuntime.jsx("h2", {
-                className: "mb-3 mx-auto mt-5",
+            /*#__PURE__*/ _jsxRuntime.jsxs("label", {
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
                     lineNumber: 77
                 },
                 __self: this,
-                children: "BestMarvelMovies Registration"
-            }),
-            /*#__PURE__*/ _jsxRuntime.jsxs(Form.Group, {
-                className: "mb-3 mx-auto mt-4",
-                controlId: "formUsername",
-                __source: {
-                    fileName: "src/components/registration-view/registration-view.jsx",
-                    lineNumber: 79
-                },
-                __self: this,
                 children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Label, {
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 80
-                        },
-                        __self: this,
-                        children: "Username:"
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Control, {
+                    "Username:",
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
                         type: "text",
                         value: username,
                         onChange: (e)=>setUsername(e.target.value)
                         ,
-                        required: true,
-                        placeholder: "Enter a username",
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 81
+                            lineNumber: 79
                         },
                         __self: this
-                    }),
-                    values.usernameErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 88
-                        },
-                        __self: this,
-                        children: values.usernameErr
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsxRuntime.jsxs(Form.Group, {
-                className: "mb-3 mx-auto mt-4",
+            /*#__PURE__*/ _jsxRuntime.jsxs("label", {
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
-                    lineNumber: 91
+                    lineNumber: 85
                 },
                 __self: this,
                 children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Label, {
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 92
-                        },
-                        __self: this,
-                        children: "Password:"
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Control, {
+                    "Password:",
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
                         type: "password",
                         value: password,
                         onChange: (e)=>setPassword(e.target.value)
                         ,
-                        required: true,
-                        minLength: "6",
-                        placeholder: "Password must be 6 characters long",
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 93
+                            lineNumber: 87
                         },
                         __self: this
-                    }),
-                    values.passwordErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 101
-                        },
-                        __self: this,
-                        children: values.passwordErr
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsxRuntime.jsxs(Form.Group, {
-                className: "mb-3 mx-auto mt-4",
+            /*#__PURE__*/ _jsxRuntime.jsxs("label", {
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
-                    lineNumber: 104
+                    lineNumber: 93
                 },
                 __self: this,
                 children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Label, {
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 105
-                        },
-                        __self: this,
-                        children: "Email:"
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Control, {
+                    "Email:",
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
                         type: "email",
                         value: email,
-                        required: true,
                         onChange: (e)=>setEmail(e.target.value)
                         ,
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 106
+                            lineNumber: 95
                         },
                         __self: this
-                    }),
-                    values.emailErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 112
-                        },
-                        __self: this,
-                        children: values.emailErr
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsxRuntime.jsxs(Form.Group, {
-                className: "mb-3 mx-auto mt-4",
+            /*#__PURE__*/ _jsxRuntime.jsxs("label", {
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
-                    lineNumber: 115
+                    lineNumber: 101
                 },
                 __self: this,
                 children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Label, {
-                        __source: {
-                            fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 116
-                        },
-                        __self: this,
-                        children: "Birthday:"
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(Form.Control, {
+                    "Birthday:",
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
                         type: "date",
                         value: birthday,
                         onChange: (e)=>setBirthday(e.target.value)
                         ,
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 117
+                            lineNumber: 103
                         },
                         __self: this
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsxRuntime.jsx(Button, {
-                className: "mt-4",
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
                 type: "submit",
                 onClick: handleSubmit,
                 __source: {
                     fileName: "src/components/registration-view/registration-view.jsx",
-                    lineNumber: 124
+                    lineNumber: 109
                 },
                 __self: this,
-                children: "Register"
+                children: "Submit"
             })
         ]
     }));
