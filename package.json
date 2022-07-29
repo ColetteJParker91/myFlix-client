@@ -9,9 +9,7 @@
               "deploy": "gh-pages -d build",
               "build": "react-scripts build",
               "test": "react-scripts test",
-              "eject": "react-scripts eject",
-    "start": "parcel",
-    "build": "parcel build"
+              "eject": "react-scripts eject"
   },
   "author": "",
   "license": "ISC",
