@@ -1,0 +1,29 @@
+body, html {
+  background: #f7e2e2;
+}
+
+.app-container {
+  width: 100%;
+  background: #f7e2e2;
+}
+
+.movieViewContainer {
+  background: #61a4bc;
+}
+
+
+
+.movie-poster {
+  justify-content: center;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+
+
+.label {
+  color: #123c69;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=index.ce1d6491.css.map */
