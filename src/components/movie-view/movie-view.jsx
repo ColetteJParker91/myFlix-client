@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card, Col, Container} from 'react-bootstrap';
+import { Button, Row, Col, Container} from 'react-bootstrap';
 
 import './movie-view.scss';
 
 export class MovieView extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      movies: [],
+      user: null,
+    };
+  }
 
   keypressCallback(event) {
     console.log(event.key);
