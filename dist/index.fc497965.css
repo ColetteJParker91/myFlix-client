@@ -1,0 +1,24 @@
+
+.movie-poster {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: 700;
+  color: #123c69;
+}
+body, html {
+  background: #F7E2E2;
+}
+
+.app-container {
+  width: 100%;
+  background: #F7E2E2;
+}
+
+.movieViewContainer {
+  background: #61A4BC;
+}
+/*# sourceMappingURL=index.fc497965.css.map */
