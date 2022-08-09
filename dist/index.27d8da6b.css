@@ -1,9 +1,29 @@
 
 
+.movie-poster {
+  justify-content: center;
+  margin-bottom: 15px;
+  display: flex;
+}
 
 
-.my-flix {
-  color: #4682b4;
+
+.label {
+  color: #123c69;
+  font-weight: 700;
+}
+
+body, html {
+  background: #f7e2e2;
+}
+
+.app-container {
+  width: 100%;
+  background: #f7e2e2;
+}
+
+.movieViewContainer {
+  background: #61a4bc;
 }
 
 /*# sourceMappingURL=index.27d8da6b.css.map */

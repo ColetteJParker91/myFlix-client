@@ -5,9 +5,11 @@
       "description": "",
       "source": "src/index.html",
       "scripts": {
-          "test": "echo \"Error: no test specified\" && exit 1",
-             "start": "parcel",
-             "build": "parcel build"
+            "test": "echo \"Error: no test specified\" && exit 1",
+            "start": "parcel",
+            "build": "parcel build",
+            "predeploy": "npm run build",
+            "deploy": "gh-pages -d build"
       },
       "author": "",
       "license": "ISC",
@@ -17,7 +19,8 @@
             "prop-types": "^15.8.1",
             "react": "^18.2.0",
             "react-bootstrap": "^2.4.0",
-            "react-dom": "^18.2.0"
+            "react-dom": "^18.2.0",
+            "redux": "^4.2.0"
       },
       "devDependencies": {
             "@parcel/transformer-sass": "^2.6.2",
