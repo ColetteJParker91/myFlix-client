@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
 
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import "./registration-view.scss";
 
