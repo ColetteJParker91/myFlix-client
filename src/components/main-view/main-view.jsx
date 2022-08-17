@@ -3,20 +3,20 @@ import axios from 'axios';
 
 import { BrowserRouter as Router, Routes, Route, Redirect, Link } from "react-router-dom";
 
-import { LoginView } from '../login-view/login-view';
-import { MovieCard } from '../movie-card/movie-card';
-import { MovieView } from '../movie-view/movie-view';
+import { LoginView } from "../login-view/login-view";
+import { NavBar} from "../navbar/navbar";
+import { MovieCard } from "../movie-card/movie-card";
+import { MovieView } from "../movie-view/movie-view";
 import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
-import { RegistrationView } from '../registration-view/registration-view';
+import { RegistrationView } from "../registration-view/registration-view";
 import {ProfileView} from "../profile-view/profile-view";
 
-import {Container, Col, Row, Navbar, Nav} from 'react-bootstrap';
+import {Container, Col, Row,} from 'react-bootstrap';
 
 import './main-view.scss';
 
 export class MainView extends React.Component {
-
     constructor() {
         super();
         this.state = {
@@ -37,7 +37,7 @@ export class MainView extends React.Component {
   
     getMovies(token) {
       axios
-        .get('https://best-marvel-movies.herokuapp.com/movies', {
+        .get("https://best-marvel-movies.herokuapp.com/movies", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -59,14 +59,14 @@ export class MainView extends React.Component {
           user: authData.user.Username
         });
       
-        localStorage.setItem('token', authData.token);
-        localStorage.setItem('user', authData.user.Username);
+        localStorage.setItem("token", authData.token);
+        localStorage.setItem("user", authData.user.Username);
         this.getMovies(authData.token);
       }
       
       onLoggedOut() {
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
         this.setState({
           user: null
         });
