@@ -20,9 +20,23 @@ function movies(state = [], action) {
   }
 }
 
+function user(state = '', action) {
+    switch (action.type) {
+      case SET_USER:
+        return action.value || localStorage.getItem('user');
+      case ADD_FAVMOVIE:
+        return action.value;
+      case REM_FAVMOVIE:
+        return action.value;
+      default:
+        return state;
+    }
+  }
+
 const moviesApp = combineReducers({
   visibilityFilter,
-  movies
+  movies,
+  user
 });
 
 export default moviesApp;

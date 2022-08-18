@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-import {Container, Cardgroup, Col, Row} from 'react-bootstrap';
+import {Container, CardGroup, Col, Row} from 'react-bootstrap';
 
 import { Link } from "react-router-dom";
 
