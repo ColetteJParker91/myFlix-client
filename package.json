@@ -19,12 +19,8 @@
       "author": "",
       "license": "ISC",
       "dependencies": {
-<<<<<<< Updated upstream
-            "axios": "^0.26.1",
-=======
             "parcel": "2.6.2",
-            "axios": "^0.27.1",
->>>>>>> Stashed changes
+            "axios": "^0.27.2",
             "prop-types": "^15.8.1",
             "react": "^18.1.0",
             "react-bootstrap": "^2.4.0",
@@ -36,6 +32,6 @@
       },
       "devDependencies": {
             "@parcel/transformer-sass": "^2.6.2"
-      
+
       }
 }
