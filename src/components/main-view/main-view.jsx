@@ -15,7 +15,7 @@ import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
 import { RegistrationView } from "../registration-view/registration-view";
 import { ProfileView } from "../profile-view/profile-view";
-import { MovieCard } from "../movie.card/movie-card";
+import { MovieCard } from "../movie-card/movie-card";
 
 import {Container, Col, Row,} from 'react-bootstrap';
 
