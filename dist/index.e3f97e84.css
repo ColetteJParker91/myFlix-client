@@ -1,0 +1,215 @@
+.card-body {
+  background-color: #1ba098;
+  padding-top: 5px;
+}
+
+.btn.btn-link {
+  color: #fff;
+  font-weight: 500;
+}
+
+.fav-movie {
+  margin-bottom: 20px;
+}
+
+.fav-movie figure {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.fav-movie figure img {
+  height: 300px;
+  margin: auto;
+  display: block;
+}
+
+.fav-movie figure figcaption {
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+
+
+.logout {
+  color: #eef0f2;
+  width: 100%;
+  background-color: #336d82;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: Pathway Gothic One, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: inline-block;
+}
+
+.logout:hover, .logout:focus {
+  cursor: pointer;
+  opacity: .5;
+  color: #191d32;
+  background-color: #336d82;
+  text-decoration: none;
+}
+
+.movie-poster {
+  justify-content: center;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.dir-view {
+  background-color: #191d32;
+}
+
+.dir-view-header {
+  font-variant: small-caps;
+  font-size: 25px;
+}
+
+.dir-view-button {
+  color: #eef0f2;
+  width: 100%;
+  background-color: #336d82;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: Pathway Gothic One, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: inline-block;
+}
+
+.dir-view-button:hover {
+  cursor: pointer;
+  opacity: .5;
+  background-color: #336d82;
+}
+
+.dir-view-title {
+  text-align: left;
+  font-family: League Gothic, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  display: block;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.dir-view__grid {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+
+.dir-info {
+  grid-template-rows: 50px 50px 4fr;
+  display: grid;
+}
+
+@media (max-width: 700px) {
+  .dir-view__grid {
+    display: block;
+  }
+}
+
+.genre-view {
+  background-color: #191d32;
+}
+
+.genre-view-header {
+  font-variant: small-caps;
+  font-size: 25px;
+}
+
+.genre-view-button {
+  color: #eef0f2;
+  width: 100%;
+  background-color: #336d82;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: Pathway Gothic One, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: inline-block;
+}
+
+.genre-view-button:hover {
+  cursor: pointer;
+  opacity: .5;
+  background-color: #336d82;
+}
+
+.genre-view-title {
+  text-align: left;
+  font-family: League Gothic, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  display: block;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.genre-view__grid {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+}
+
+.genre-info {
+  grid-template-rows: 50px 50px 4fr;
+  display: grid;
+}
+
+@media (max-width: 700px) {
+  .genre-view__grid {
+    display: block;
+  }
+}
+
+
+
+.row {
+  margin: 10px;
+}
+
+.user-profile, .update-inputs, .favmov-inputs {
+  color: #191d32;
+  background-color: #eef0f2;
+  padding-bottom: 10px;
+}
+
+.label {
+  color: #123c69;
+  font-weight: 700;
+}
+
+body, html {
+  background: #f7e2e2;
+}
+
+.app-container {
+  width: 100%;
+  background: #f7e2e2;
+}
+
+.movieViewContainer {
+  background: #61a4bc;
+}
+
+/*# sourceMappingURL=index.e3f97e84.css.map */
