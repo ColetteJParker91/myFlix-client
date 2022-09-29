@@ -1,6 +1,6 @@
 # myFlix-client
 # About the Project
-For this project I will be using React to build the client-side for my application called SwagFlix based on its server-side code (REST API and database).
+For this project I will be using React to build the client-side for my application called myFlix based on its server-side code (REST API and database).
 
 ## User Stories:
 - As a user, I want to be able to access information on movies, directors, and genres so that I
